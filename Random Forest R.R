@@ -42,3 +42,5 @@ my_prediction <- predict(the_forest, test)
 test$predicted_churn <- my_prediction
 
 #Evaluate predictions
+test$True_Positive <- ifelse(test$churn == 1 & test$my_prediction == 1, 1, 0)
+#More to add
